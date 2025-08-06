@@ -1,0 +1,17 @@
+{
+    "name": "administrador/crud-medico-paciente-consultas",
+    "autoload": {
+        "psr-4": {
+            "Administrador\\CrudMedicoPacienteConsultas\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Polyalves2",
+            "email": "alvespoly02@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

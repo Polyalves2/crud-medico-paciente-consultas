@@ -1,0 +1,1367 @@
+/* Estilos para a tabela */
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.data-table th, .data-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.data-table th {
+    background-color: #8ab7e2;
+}
+
+/* Estilos para botões */
+.btn {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.btn-action {
+    padding: 4px 8px;
+    margin-right: 5px;
+    text-decoration: none;
+    border-radius: 3px;
+}
+
+.btn-action.danger {
+    background-color: #ffffff;
+}
+
+/* Alertas */
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.alert-success {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+
+/* Estilos para os menus dropdown */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav li {
+    position: relative;
+}
+
+nav li.dropdown:hover > ul {
+    display: block;
+}
+
+nav li.dropdown > a::after {
+    content: " ▾";
+    font-size: 0.9em;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 200px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-radius: 0 0 4px 4px;
+    z-index: 1000;
+}
+
+nav ul ul li {
+    width: 100%;
+}
+
+nav ul ul a {
+    color: #333 !important;
+    padding: 10px 15px !important;
+    display: block;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+nav ul ul a:hover {
+    background: #f8f9fa !important;
+}
+
+.user-actions {
+    margin-left: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    nav ul ul {
+        position: static;
+        box-shadow: none;
+        border: 1px solid #eee;
+    }
+}
+
+/* Estilos para os dropdowns */
+.dropdown {
+    position: relative;
+}
+
+.dropdown > a::after {
+    content: " ▾";
+    font-size: 0.8em;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    min-width: 180px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    border-radius: 0 0 4px 4px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    color: #333 !important;
+    padding: 10px 15px !important;
+    display: block;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.dropdown-menu a:hover {
+    background: #f8f9fa !important;
+}
+
+.user-actions {
+    margin-left: auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+    }
+}
+
+/* Estilos Gerais */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+.main-header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin: 0;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+/* Navegação */
+.main-nav {
+    display: flex;
+}
+
+.nav-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown Menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 4px 4px;
+    z-index: 1000;
+    padding: 0.5rem 0;
+    list-style: none;
+    margin: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-link {
+    color: #333 !important;
+    padding: 0.5rem 1rem !important;
+    display: block;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.dropdown-link:hover {
+    background-color: #f1f1f1;
+}
+
+/* Menu do Usuário */
+.user-menu {
+    margin-left: auto;
+}
+
+.logout-link {
+    background-color: #e74c3c;
+    padding: 0.5rem 1rem !important;
+}
+
+.logout-link:hover {
+    background-color: #c0392b !important;
+}
+
+/* Conteúdo Principal */
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    /* margin-left: 20px;
+    margin-right: 20px; */
+}
+
+.content-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.welcome-title {
+    color: #502c4a;
+    margin-top: 0;
+    font-size: 2rem;
+}
+
+.welcome-text {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+.welcome-description {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Rodapé */
+.main-footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 0.3rem 0;
+    margin-top: 0.5rem;
+    line-height: 1;
+    font-size: 0.9rem;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    .dropdown-menu {
+        position: static;
+        box-shadow: none;
+        width: 100%;
+    }
+    
+    .user-menu {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+
+/* Estilos para o fundo com imagem */
+.bg-image {
+    background-image: url('../img/sistema-medico.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.overlay {
+    background-color: rgba(255, 255, 255, 0.8); /* Ajuste a transparência aqui */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ajustes para manter a legibilidade */
+.main-header {
+    background-color: rgba(44, 62, 80, 0.9); /* Header semi-transparente */
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.content-container {
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 8px;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 2rem auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.main-footer {
+    background-color: rgba(44, 62, 80, 0.9); /* Footer semi-transparente */
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+
+/* Melhorar contraste dos menus */
+.nav-link, .dropdown-link {
+    color: white;
+}
+
+.dropdown-link {
+    color: #333 !important;
+}
+
+.dropdown-menu {
+    background-color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+
+/* Estilos para a página de login */
+.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+    padding: 1px;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);    
+    padding: 30px;
+    margin: 4px auto;
+}
+
+.login-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.login-header h1 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.login-header p {
+    color: #7f8c8d;
+    font-size: 14px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.form-group input {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.login-button {
+    background-color: #28a745; /* Verde */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-button:hover {
+    background-color: #218838; /* Verde mais escuro no hover */
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #7f8c8d;
+}
+
+.login-footer a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+.alert {
+    padding: 12px 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.alert.error {
+    background-color: #fdecea;
+    color: #d32f2f;
+    border: 1px solid #f5c2c7;
+}
+
+
+/* Campo Senha */
+.form-text {
+    color: #7f8c8d;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+/* Validação do campo de senha */
+input:invalid {
+    border-color: #b8b6b6;
+}
+
+input:valid {
+    border-color: #c3e6cb;
+}
+
+
+/* Página de formulário */
+body.form-page {
+    background-color: #f8f9fa;
+    padding: 1px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 3em auto;
+    padding: 3em;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #eaeaea;
+}
+
+.form-title {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.patient-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 0.05rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #34495e;
+    font-weight: 500;
+}
+
+.form-input, .form-select {
+    width: 88%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-input:focus, .form-select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Upload de arquivo */
+.file-upload {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+
+.file-input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.file-label {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.file-button {
+    padding: 0.75rem 1rem;
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.file-button:hover {
+    background: #e9ecef;
+}
+
+.file-name {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Botões */
+.form-actions {
+    grid-column: span 2;
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.form-submit {
+    padding: 0.75rem 2rem;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.form-submit:hover {
+    background-color: #219653;
+}
+
+.form-cancel {
+    padding: .5rem 2rem;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+    display: inline-block;
+}
+
+.form-cancel:hover {
+    background-color: #c0392b;
+}
+
+/* Select com seta */
+.form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1em;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .patient-form {
+        grid-template-columns: 1fr;
+    }
+    
+    .form-actions {
+        grid-column: span 1;
+        flex-direction: column;
+    }
+    
+    .form-submit, .form-cancel {
+        width: 100%;
+    }
+}
+
+
+
+/* Ajuste para o formulário com menos campos */
+.patient-form {
+    display: grid;
+    grid-template-columns: 1fr; /* Alterado para uma coluna apenas */
+    gap: 1.5rem;
+}
+
+/* Ajuste para os grupos de formulário ocuparem toda a largura */
+.form-group {
+    grid-column: span 1;
+}
+
+/* Manter os botões de ação centralizados */
+.form-actions {
+    grid-column: span 1;
+    display: flex;
+    justify-content: center; /* Centraliza os botões */
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+
+
+
+
+
+/* Estilos específicos para formulário de médicos */
+.medico-form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* Adaptação para telas maiores */
+@media (min-width: 768px) {
+    .medico-form {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .form-group:nth-child(3),
+    .form-actions {
+        grid-column: span 2;
+    }
+}
+
+/* Estilo para campos de especialidade */
+#especialidade {
+    text-transform: capitalize;
+}
+
+/* Ajuste para select de usuários */
+.form-select {
+    background-color: #fff;
+    cursor: pointer;
+}
+
+/* Efeito hover nos botões */
+.form-submit:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.form-cancel:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+/* Página de Listagem de Médicos */
+
+.simple-page {
+    background-color: #f8f9fa;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+}
+
+.simple-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    padding: 20px;
+}
+
+.simple-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.simple-header h1 {
+    margin: 0;
+    color: #333;
+    font-size: 24px;
+}
+
+.simple-btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.simple-btn:hover {
+    background-color: #3e8e41;
+}
+
+.simple-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.simple-table th {
+    background-color: #f2f2f2;
+    padding: 12px 15px;
+    text-align: left;
+    font-weight: 500;
+    color: #555;
+}
+
+.simple-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.simple-table tr:hover {
+    background-color: #f9f9f9;
+}
+
+.simple-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.simple-link {
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-size: 13px;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.simple-link.view {
+    color: #ffffff;
+    background-color: #13a300;
+}
+
+.simple-link.edit {
+    color: #ffffff;
+    background-color: #216efc;
+}
+
+.simple-link.delete {
+    color: hsl(0, 100%, 100%);
+    background-color: #ff0026;
+}
+
+.simple-link:hover {
+    opacity: 0.8;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    .simple-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .simple-table {
+        font-size: 14px;
+    }
+    
+    .simple-table th, 
+    .simple-table td {
+        padding: 8px 10px;
+    }
+    
+    .simple-actions {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .simple-link {
+        display: block;
+        text-align: center;
+    }
+}
+
+
+
+
+
+
+
+/* Estilos para Página de Agendamento de Consulta */
+.consulta-page {
+    background-color: #f5f7fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.main-header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.main-nav ul.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    text-decoration: underline;
+}
+
+.main-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.form-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.consulta-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.consulta-form .form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.consulta-form .form-select,
+.consulta-form .form-input,
+.consulta-form .form-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.consulta-form .form-textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.consulta-form .form-actions {
+    margin-top: 2rem;
+}
+
+.consulta-form .form-submit {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.consulta-form .form-submit:hover {
+    background-color: #218838;
+}
+
+.alert {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+    .main-nav ul.nav-list {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .form-container {
+        padding: 1.5rem;
+    }
+}
+
+
+
+
+
+
+
+/* Estilo para Lista de Consultas */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #ccd2d6;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+table th {
+    background-color: #2c3e50;
+    color: white;
+    padding: 12px 15px;
+    text-align: left;
+}
+
+table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+table tr:hover {
+    background-color: #f5f5f5;
+}
+
+table tr:last-child td {
+    border-bottom: none;
+}
+
+table a {
+    color: #3498db;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+table a:last-child {
+    color: #e74c3c;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    table th, table td {
+        padding: 8px 10px;
+    }
+    
+    table a {
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+}
+
+
+
+
+
+
+
+/* Estilo para Edição de Consulta */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0 0;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+form {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+label {
+    display: block;
+    margin: 1.5rem 0 0.5rem 0;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+select, input[type="datetime-local"], textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+button[type="submit"] {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    margin-top: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #2874a6;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    form {
+        padding: 1.5rem;
+    }
+}
+
+
+
+
+/* Estilo para Visualização de Consulta */
+/* Estilo Simplificado para Visualização de Consulta */
+.consulta-view {
+    font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    line-height: 1.5;
+}
+
+.consulta-view header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.consulta-view h1 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: #333;
+}
+
+.consulta-info {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.info-box {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.info-box:last-child {
+    border-bottom: none;
+}
+
+.info-box h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    color: #444;
+}
+
+.info-box p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.btn {
+    background: #3498db;
+    color: white;
+}
+
+.btn.danger {
+    background: #e74c3c;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 480px) {
+    .consulta-view {
+        padding: 10px;
+    }
+    
+    .consulta-info {
+        padding: 15px;
+    }
+}
+
+.consultas-table th,
+.consultas-table td {
+    color: black; /* Garante que texto em th e td também fique preto */
+}
